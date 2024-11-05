@@ -1,0 +1,446 @@
+/* Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    /* background-image: linear-gradient(to bottom left, #153137, #204f5a); */
+    background-color: #153137;
+}
+
+/* Navbar */
+.navbar-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: fixed;
+    background-color: #153137;
+    box-shadow: -1px 6px 8px 0px rgba(0,0,0,0.31)
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #7ABFA5;
+}
+
+.logo span {
+    color: #9BF272;
+    letter-spacing: 0.5px;
+}
+
+.nav-list ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3rem;
+    
+}
+
+
+.nav-list a {
+    text-decoration: none;
+    color: #BAC8D9;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.3rem;
+    transition-property: color 100ms;
+}
+
+.nav-list a:hover {
+    color: #9BF272;
+    text-shadow: 0 0 15px #9BF272, 0 0 1px #9BF272
+}
+
+.nav-list ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.intro {
+    max-width: 400px;
+    color: #ffffff;
+}
+.kosong{
+    margin: 60px;
+}
+
+.intro h2 {
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+
+.intro span {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.intro p {
+    font-size: 1.6rem;
+    color: #9BF272;
+    margin: 1rem 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 1.7rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+}
+
+.btn.download {
+    background-color: #446b73;
+    color: white;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.btn.contact {
+    background-color: transparent;
+    color: #ffffff;
+    border: 4px solid #446b73;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+
+}
+
+.btn.download:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: #9BF272;
+    box-shadow: 0 0 10px #9BF272, 0 0 1px #9BF272
+}
+
+.btn.contact:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    color: #ffffff;
+    border: 4px solid #9BF272;
+    box-shadow: 0 0 10px #9BF272, 0 0 1px #9BF272
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circular_image {
+    width: 300px; /* Sesuaikan ukuran gambar */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-40px); /* Menggeser gambar ke atas */
+    
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    width: 295px; /* Ukuran background sedikit lebih besar dari gambar */
+    height: 242px;
+    background-color: #BAC8D9;
+    border-radius: 50%;
+    border-top-right-radius: 35%;
+    top: 10px; /* Posisi background agar muncul di belakang gambar */
+    z-index: 0;
+    animation: 1.5s alternate anim-div;
+}
+
+@keyframes anim-div {
+    0%{transform:scale(0);}
+    100%{transform:scale(1);}
+}
+
+.social-media {
+    display: flex;
+    gap: 1.8rem;
+    margin-top: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.social-media li:hover {
+    display: inline-block;
+    transform: scale(1.1);
+}
+
+.social-media a {
+    color: #BAC8D9;
+    font-size: 1.9rem;
+    text-decoration: none;
+    
+}
+
+.social-media a:hover {
+    
+    transition: transform 0.2s;
+    color: #9BF272; /* Warna hover */
+    text-shadow: 0 0 10px #9BF272, 0 0 1px #9BF272
+    
+}
+
+/*About*/
+.about-section {
+    max-width: 700px;
+    margin: 10rem auto;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #1c4751;
+    position: relative;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #9BF272;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-aside {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background-color: #1c4751;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.about-aside img {
+    width: 200px;
+    display: block;
+    margin: -3rem auto 2rem; /* Mengatur gambar berada di tengah dengan jarak bawah */
+}
+
+.about-aside h3 {
+    font-size: 1.1rem;
+    color: #f4f4f4;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.about-aside p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccd2d3;
+    text-align: justify;
+    margin-bottom: 0.2rem;
+}
+.about-aside p a{
+    color: #ccd2d3;
+}
+
+
+/* Skills Section */
+.skills-section {
+    max-width: 1300px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 4rem;
+    color: #9BF272;
+    margin-bottom: 5rem;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    
+}
+
+.skill-item img {
+    width: 97px; /* Tentukan ukuran tetap */
+    height: 97px; /* Tentukan ukuran tetap */
+    position: relative;
+    margin-bottom: 0.5rem;
+    object-fit: contain; /* Agar gambar sesuai dengan ukuran yang ditentukan */
+    transition: transform 0.2s;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1); /* Efek zoom saat di-hover */
+}
+
+.skill-item span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #BAC8D9;
+}
+
+.skill-item img:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* Certificate Section */
+.certificate-section {
+    max-width: 1300px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.certificate-section h2 {
+    font-size: 3rem;
+    color: #9BF272;
+    margin-bottom: 2rem;
+}
+
+.certificate-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.certificate-item img {
+    width: 23rem; /* Tentukan ukuran tetap */
+    height: auto; /* Tentukan ukuran tetap */
+    position: relative;
+    object-fit: contain; /* Agar gambar sesuai dengan ukuran yang ditentukan */
+    transition: transform 0.2s;
+}
+.certificate-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px #ffffff, 0 0 1px #ffffff
+}
+
+/* Contact Section */
+.container-contact {
+    max-width: 1300px;
+    height: auto;
+    margin: 4rem auto;
+    text-align:center;
+}
+.container-contact .row {
+    flex-direction: row;
+}
+
+.contact-section {
+    margin: 2rem auto;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #1c4751;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3.3rem;
+    color: #9BF272;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.2s;
+}
+
+.contact-item i {
+    font-size: 2.5rem; /* Ukuran ikon */
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.contact-item span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #BAC8D9;
+}
+
+.contact-item a:hover i {
+    transform: scale(1.1); /* Efek zoom pada ikon saat hover */
+    text-shadow: 0 0 3px #9BF272, 0 0 1px #9BF272
+}
+
+.contact-item a:hover span {
+    color: #9BF272; /* Ubah warna teks saat hover */
+    text-shadow: 0 0 15px #9BF272, 0 0 1px #9BF272
+}
